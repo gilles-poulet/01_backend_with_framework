@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ue1104.iramps.be</groupId>
 	<artifactId>api_backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>01_api_backend_framework</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

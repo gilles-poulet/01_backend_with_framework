@@ -10,8 +10,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import ue1104.iramps.be.api_backend.Model.IntermediateTable.PersonneCours;
 import ue1104.iramps.be.api_backend.Model.IntermediateTable.PersonneCoursKey;
 
-@RepositoryRestResource(collectionResourceRel = "personne_cours", path = "personne_cours")
 public interface PersonnesCoursRepository extends PagingAndSortingRepository<PersonneCours,PersonneCoursKey>, CrudRepository<PersonneCours,PersonneCoursKey>{
     List<PersonneCours> findByIdCoursID(@Param("cours_id") int id);
-    List<PersonneCours> findByIdPersonneID(@Param("cours_id") int id);
+    List<PersonneCours> findByIdPersonneID(@Param("personne_id") int id);
 }

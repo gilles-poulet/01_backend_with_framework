@@ -9,7 +9,6 @@ import ue1104.iramps.be.api_backend.Model.BL.Cours;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "cours", path = "cours")
 public interface CoursRepository extends PagingAndSortingRepository<Cours,Long>, CrudRepository<Cours,Long>  {
     List<Cours> findByNom(@Param("nom") String nom);
     Cours findById(@Param("id") int id);

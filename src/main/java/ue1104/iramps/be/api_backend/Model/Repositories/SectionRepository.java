@@ -9,7 +9,6 @@ import ue1104.iramps.be.api_backend.Model.BL.Section;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "section", path = "section")
 public interface SectionRepository extends PagingAndSortingRepository<Section,Long>, CrudRepository<Section,Long>  {
     List<Section> findByNom(@Param("nom") String nom);
     Section findById(@Param("id") int id);

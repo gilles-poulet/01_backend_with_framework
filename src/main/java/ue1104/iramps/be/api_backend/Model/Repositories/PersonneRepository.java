@@ -10,7 +10,6 @@ import ue1104.iramps.be.api_backend.Model.BL.Personne;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "personne", path = "personne")
 public interface PersonneRepository extends PagingAndSortingRepository<Personne,Long>, CrudRepository<Personne,Long>  {
     @Query("SELECT p FROM Personne p WHERE p.nom = :nom AND p.prenom = :prenom")
     List<Personne> findByNomAndPrenom(@Param("nom") String nom, @Param("prenom") String prenom);
