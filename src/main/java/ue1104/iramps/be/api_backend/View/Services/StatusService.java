@@ -30,13 +30,13 @@ public class StatusService {
     public StatusDTO getStatusByNom(String nom) {
         Status status = statusRepository.findByNom(nom);
         if (status != null){
-            StatusDTO dto = new StatusDTO(status.getNom());
+            StatusDTO dto = StatusMapper.toDTO(status);
             return dto;
         }
         return null;
     }
 
-    // Create
+
     public List<StatusDTO> createStatus(StatusDTO[] request) {
         ArrayList<StatusDTO> list = new ArrayList<StatusDTO>();
         for (StatusDTO statusRequestDTO : request) {
