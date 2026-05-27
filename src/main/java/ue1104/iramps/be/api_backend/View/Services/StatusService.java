@@ -36,7 +36,7 @@ public class StatusService {
         return null;
     }
 
-
+    @Transactional
     public List<StatusDTO> createStatus(StatusDTO[] request) {
         ArrayList<StatusDTO> list = new ArrayList<StatusDTO>();
         for (StatusDTO statusRequestDTO : request) {
